@@ -1,10 +1,10 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import CustomLineChart from './../../components/CustomLineChart';
 
-const LoginPage = (props) => (
-    <div>Login page
-        <li><Link to="/app">App</Link></li>
-    </div>
+const LoginPage = () => (
+  <div>
+    <CustomLineChart />
+  </div>
 );
 
 export default LoginPage;

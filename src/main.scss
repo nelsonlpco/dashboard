@@ -1,0 +1,39 @@
+$dark-blue: #0C2837;
+$hard-dark-blue: #0E2836;
+$soft-light-blue: #80BACB;
+$light-blue: #7394B0;
+$blue-marine: #095078;
+$yellow: #FAFF00;
+$white: #FEFEFE;
+
+body{
+padding: 0;
+margin: 0;
+}
+
+.container{
+  display: flex;
+  min-width: 100vh;
+  min-height: 100vh;
+}
+
+.bg-primary {
+  background-color: $dark-blue;
+}
+
+.bg-dark {
+  background: $hard-dark-blue;
+}
+
+.text-primary{
+  color: $blue-marine;
+}
+
+.text-secondary{
+  color: $soft-light-blue;
+}
+
+.text-white{
+  color: $white;
+}
+
