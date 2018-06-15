@@ -1,50 +1,55 @@
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
-const data = [
+const series = [
   {
-    name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
+    name: 'Series 1',
+    data: [
+      { category: 'A', value: 0 },
+      { category: 'B', value: 21 },
+      { category: 'C', value: 70 },
+      { category: 'D', value: 81 },
+    ],
   },
   {
-    name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
+    name: 'Series 2',
+    data: [
+      { category: 'D', value: 81 },
+      { category: 'F', value: 120 },
+    ],
   },
   {
-    name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
-  },
-  {
-    name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
-  },
-  {
-    name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
-  },
-  {
-    name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
-  },
-  {
-    name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
+    name: 'Series 3',
+    data: [
+      { category: 'G', value: 24 },
+      { category: 'H', value: 62 },
+      { category: 'I', value: 91 },
+      { category: 'J', value: 106 },
+    ],
   },
 ];
 
-
 const CustomLineChart = () => (
-  <LineChart
-    width={600}
-    height={300}
-    data={data}
-    margin={
-      {
-        top: 5, right: 30, left: 20, bottom: 5,
+  <ResponsiveContainer>
+    <LineChart
+      width={600}
+      height={300}
+      margin={
+        {
+          top: 5, right: 30, left: 20, bottom: 5,
+        }
       }
-    }
-  >
-    <XAxis dataKey="name" />
-    <YAxis />
-    <CartesianGrid strokeDasharray="3 3" />
-    <Tooltip />
-    <Legend />
-    <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-    <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-  </LineChart>
+    >
+      <XAxis dataKey="category" type="category" allowDuplicatedCategory={false} />
+      <YAxis dataKey="value" />
+      <CartesianGrid strokeDasharray="3 3" />
+      <Tooltip />
+      <Legend />
+      {
+        series.map(s => <Line dataKey="value" data={s.data} name={s.name} key={s.name} strokeWidth="2" activeDot={{ r: 8 }} />)
+      }
+    </LineChart>
+  </ResponsiveContainer>
 );
 
 export default CustomLineChart;

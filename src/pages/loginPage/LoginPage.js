@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLineChart from './../../components/CustomLineChart';
 
 const LoginPage = () => (
-  <div>
+  <div style={{ width: '90vw', height: '90vh' }}>
     <CustomLineChart />
   </div>
 );
