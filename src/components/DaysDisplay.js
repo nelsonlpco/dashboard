@@ -4,12 +4,13 @@ import { PropTypes } from 'prop-types';
 const propTypes = {
   days: PropTypes.number,
   description: PropTypes.string,
-  daysColor: 
+  daysColor: PropTypes.string,
 };
 
 const defaultProps = {
   days: 0,
   description: '',
+  daysColor: '#FF7744',
 };
 
 const DaysDisplay = ({ days, daysColor, description }) => {

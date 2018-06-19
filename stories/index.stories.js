@@ -7,6 +7,7 @@ import { linkTo } from '@storybook/addon-links';
 import PercentualBar from '../src/components/PercentualBar/index';
 import Card from '../src/components/Card';
 import DaysDisplay from './../src/components/DaysDisplay';
+import ListPoints from './../src/components/ListPoints';
 
 storiesOf('PercentualBar', module)
   .add('percentual: 0%, points: 0', () => <PercentualBar percentual={0} points={0} />)
@@ -24,4 +25,22 @@ storiesOf('Card', module)
 
 storiesOf('DaysDisplay', module)
   .add('default', () => <DaysDisplay />)
+  .add('days=1.5, description="behind target"', () => <DaysDisplay days={1.5} description="behind target" />);
+
+const items = [
+  {
+    value: 0,
+    label: 'not started',
+  },
+  {
+    value: 11,
+    label: 'in progress',
+  },
+  {
+    value: 1,
+    label: 'done',
+  },
+];
+storiesOf('ListPoits', module)
+  .add('default', () => <ListPoints items={items} />)
   .add('days=1.5, description="behind target"', () => <DaysDisplay days={1.5} description="behind target" />);
