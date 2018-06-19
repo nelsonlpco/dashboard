@@ -15,7 +15,7 @@ const defaultProps = {
   backgroundColor: 'none',
   width: '200px',
   height: '200px',
-  padding: '15px'
+  padding: '15px',
 };
 
 const Card = ({

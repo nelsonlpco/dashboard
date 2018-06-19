@@ -43,4 +43,4 @@ const items = [
 ];
 storiesOf('ListPoits', module)
   .add('default', () => <ListPoints items={items} />)
-  .add('days=1.5, description="behind target"', () => <DaysDisplay days={1.5} description="behind target" />);
+  .add('valueColor=blue, labelColor=red', () => <ListPoints items={items} valueColor="blue" labelColor="red" />);

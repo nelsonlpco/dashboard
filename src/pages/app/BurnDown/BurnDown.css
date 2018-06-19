@@ -1,0 +1,24 @@
+.item-a {
+  grid-area: header;
+}
+.item-b {
+  grid-area: main;
+}
+.item-d {
+  grid-area: footer;
+}
+.saci {
+  grid-area:  saci;
+}
+
+.grid-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header"
+    "main main "
+    "footer saci";
+}

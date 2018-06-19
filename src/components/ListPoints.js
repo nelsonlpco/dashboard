@@ -2,33 +2,58 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 
 const propTypes = {
-  items: PropTypes.array.isRequired,
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  labelColor: PropTypes.string,
+  valueColor: PropTypes.string,
 };
 
-const ListPoints = ({ items }) => {
+const defaultProps = {
+  labelColor: '#000',
+  valueColor: '#000',
+};
+
+const ListPoints = ({ items, labelColor, valueColor }) => {
   const styles = {
     container: {
-      listStyleType: 'none',
+      display: 'grid',
+      gridTemplateColumns: '1fr',
 
     },
-    point: {
+    listContainer: {
+      display: 'grid',
+      gridTemplateColumns: '0.5fr 2fr',
+    },
+    value: {
       fontSize: '1.5rem',
+      justifySelf: 'end',
+      color: valueColor,
+    },
+    label: {
+      fontSize: '1rem',
+      marginLeft: '0.4rem',
+      alignSelf: 'center',
+      color: labelColor,
     },
   };
 
   return (
-    <ul style={styles.container}>
+    <div style={styles.container}>
       {
         items.map(item => (
-          <li>
-            <strong style={styles.point}>{item.value}</strong>
-            <span>{item.label.toUpperCase()}</span>
-          </li>))
+          <div style={styles.listContainer} >
+            <div style={styles.value}>
+              <strong style={styles.point}>{item.value}</strong>
+            </div>
+            <div style={styles.label}>
+              {item.label.toUpperCase()}
+            </div>
+          </div>))
       }
-    </ul>
+    </div>
   );
 };
 
 ListPoints.propTypes = propTypes;
+ListPoints.defaultProps = defaultProps;
 
 export default ListPoints;
