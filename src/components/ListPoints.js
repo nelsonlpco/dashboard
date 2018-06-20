@@ -40,7 +40,7 @@ const ListPoints = ({ items, labelColor, valueColor }) => {
     <div style={styles.container}>
       {
         items.map(item => (
-          <div style={styles.listContainer} >
+          <div key={item.value + item.label} style={styles.listContainer} >
             <div style={styles.value}>
               <strong style={styles.point}>{item.value}</strong>
             </div>

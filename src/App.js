@@ -2,7 +2,7 @@ import React from 'react';
 import PublicRouter from './routes/PublicRoutes';
 
 const App = () => (
-  <div className="container bg-primary">
+  <div>
     <PublicRouter />
   </div>
 );
