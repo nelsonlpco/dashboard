@@ -7,17 +7,16 @@
 }
 
 .timing-grid {
-  width: 95%;
-  height: 90%;
+  width: 85%;
+  height: 80%;
   display: grid;
-  grid-column-gap: 1rem;
+  grid-column-gap: 4rem;
   grid-row-gap: 1rem;
   grid-template-columns:  1fr 1fr 1fr 1fr;
   grid-template-rows: minmax(100px, auto);
 }
 
 .lead-time-days {
-  background-color: aqua;
   grid-column-start: 1;
   grid-column-end: span 2;
 }
@@ -28,6 +27,18 @@
   grid-row-start: 1;
   grid-row-end: span 2;
   background-color: aqua;
+}
+
+.reaction-time-days {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.cycle-time {
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
 }
 
 .bars {
