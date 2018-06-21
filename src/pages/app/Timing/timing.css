@@ -1,0 +1,44 @@
+.timing-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.timing-grid {
+  width: 95%;
+  height: 90%;
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-columns:  1fr 1fr 1fr 1fr;
+  grid-template-rows: minmax(100px, auto);
+}
+
+.lead-time-days {
+  background-color: aqua;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+
+.lead-time-graphic {
+  grid-column-start: 3;
+  grid-column-end: span 4;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  background-color: aqua;
+}
+
+.bars {
+  grid-column: 1/7;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1rem;
+}
+
+.grid-bars {
+  display: grid;
+  grid-row-gap: 0.5rem;
+}
+
