@@ -2,22 +2,23 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import DayTimeDisplay from './DayTimeDisplay';
 
-const leadTimeBar = {
-  days: 9,
-  hours: 4,
-  reactionTimePercent: 75,
-};
-
 const propTypes = {
   borderColor: PropTypes.string,
   percentual: PropTypes.number.isRequired,
+  days: PropTypes.number.isRequired,
+  hours: PropTypes.number.isRequired,
 };
 
 const defaultProps = {
   borderColor: '#365262',
 };
 
-const LeadTimeGraphic = ({ borderColor, percentual }) => {
+const LeadTimeGraphic = ({
+  borderColor,
+  percentual,
+  days,
+  hours,
+}) => {
   const styles = {
     container: {
       display: 'grid',
@@ -55,7 +56,7 @@ const LeadTimeGraphic = ({ borderColor, percentual }) => {
   return (
     <div style={styles.container}>
       <div style={styles.leftBar} />
-      <DayTimeDisplay days={leadTimeBar.days} time={leadTimeBar.hours} daysColor="#FFF" label="reaction time" />
+      <DayTimeDisplay days={days} time={hours} daysColor="#FFF" label="reaction time" />
       <div style={styles.rightBar} />
       <div style={styles.bar}>
         <div style={styles.reactTime} />
