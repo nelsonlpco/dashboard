@@ -1,0 +1,50 @@
+.main-container-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5vh 95vh;
+}
+
+.main-container-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.main-pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-link {
+  background-color: aquamarine;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  justify-self: center;
+  align-self: center;
+  margin-left: 5px;
+}
+
+.main-link.active {
+  background-color: chartreuse;
+}
+
+.example-enter {
+  transform: translate(100%);
+}
+
+.example-enter-active {
+  transform: translate(0%);
+  transition: all 500ms ease-in;
+}
+.example-exit{
+  transform: translate(0%);
+}
+
+.example-exit-active {
+  position: absolute;
+  z-index: 9999;
+  top: 5vh;
+  transform: translate(-100%);
+  transition: all 300ms ease-in;
+}
