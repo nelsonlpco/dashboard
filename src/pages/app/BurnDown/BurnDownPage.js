@@ -1,9 +1,9 @@
 import React from 'react';
-import PercentualBar from './../../../components/PercentualBar/index';
-import Card from './../../../components/Card';
-import DaysDisplay from './../../../components/DaysDisplay';
-import CustomLineChart from './../../../components/CustomLineChart';
-import ListPoints from './../../../components/ListPoints';
+import PercentualBar from '../../../components/PercentualBar';
+import Card from '../../../components/Card';
+import DaysDisplay from '../../../components/DaysDisplay';
+import CustomLineChart from '../../../components/CustomLineChart';
+import ListPoints from '../../../components/ListPoints';
 import './BurnDown.css';
 
 const items = [

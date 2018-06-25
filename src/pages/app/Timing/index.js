@@ -1,11 +1,10 @@
 import React from 'react';
-import Card from './../../../components/Card';
-import DaysDisplay from './../../../components/DaysDisplay';
 import PercentualBar from './../../../components/PercentualBar/index';
 
 import './timing.css';
 import DayTimeDisplay from '../../../components/DayTimeDisplay';
 import GraphicBar from '../../../components/LeadTimeGraphic';
+import LeadTimeFullGraphic from './LeadTimeFullGraphic';
 
 const Timing = () => (
   <div className="timing-container">
@@ -16,9 +15,7 @@ const Timing = () => (
       </div>
 
       <div className="lead-time-graphic">
-        <Card height="100%" width="100%" padding="0px" borderColor="#365262">
-          <DaysDisplay days={1.8} description="behind target" />
-        </Card>
+        <LeadTimeFullGraphic />
       </div>
 
       <div className="reaction-time-days">
