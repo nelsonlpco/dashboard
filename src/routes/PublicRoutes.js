@@ -1,12 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router';
-import MainPage from '../pages/app/mainPage/MainPage';
-import Timing from '../pages/app/Timing';
+import MainPage from '../pages/app/mainPage';
 
 const PublicRoutes = () => (
-  <Route path="/" component={Timing}>
-    <Route path="/app" component={MainPage} />
-  </Route>
+  <Route path="/" component={MainPage} />
 );
 
 export default PublicRoutes;

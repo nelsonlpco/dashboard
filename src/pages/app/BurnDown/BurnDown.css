@@ -1,19 +1,19 @@
-.header {
+.burndown-header {
   grid-area: header;
 }
 
-.graphic {
+.burndown-graphic {
   grid-area: main;
 }
 
-.days {
+.burndown-days {
   grid-area: days;
 }
-.listPoints {
+.burndown-listPoints {
   grid-area:  listPoints;
 }
 
-.bars {
+.burndown-bars {
   grid-area: bars;
 }
 
@@ -25,7 +25,7 @@
   justify-content: center;
 }
 
-.grid-container {
+.burndown-grid-container {
   width: 80%;
   height: 90%;
   display: grid;
