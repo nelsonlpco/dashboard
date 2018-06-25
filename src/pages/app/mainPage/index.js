@@ -36,8 +36,8 @@ const MainPage = ({ location }) => {
           timeout={{ enter: 500, exit: 300 }}
         >
           <Switch location={location}>
-            <Route exact path="/" component={BurnDownPage} />
-            <Route exact path="/burn-down" component={Timing} />
+            <Route exact path="/" component={Timing} />
+            <Route exact path="/burn-down" component={BurnDownPage} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>
